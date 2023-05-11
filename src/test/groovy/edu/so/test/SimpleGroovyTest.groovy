@@ -23,4 +23,17 @@ class SimpleGroovyTest extends Specification{
         "12121"                 |   true
         "Ma is a nun, as I am." |   true
     }
+
+    def "Testing array fill" () {
+        expect:
+        var result = simpleTest.createArrayWithOnes(testSize)
+
+        expectedSize == result.size()
+        expectedValue == result[testSize - 1]
+
+        where:
+        testSize    | expectedSize  | expectedValue
+        1           | 1             | 1
+        2           | 2             | 1
+    }
 }

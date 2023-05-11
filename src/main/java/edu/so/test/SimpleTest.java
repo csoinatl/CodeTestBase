@@ -1,5 +1,7 @@
 package edu.so.test;
 
+import java.util.Arrays;
+
 public class SimpleTest {
 
     public boolean isPalindrome (String testString) {
@@ -9,6 +11,14 @@ public class SimpleTest {
         String reversedString = new StringBuilder(convertedString).reverse().toString();
 
         return convertedString.equalsIgnoreCase(reversedString);
+    }
+
+    public int[] createArrayWithOnes (int size) {
+        int[] result = new int[size];
+
+        Arrays.fill(result, 1);
+
+        return result;
     }
 
     public static void main(String[] args) {
